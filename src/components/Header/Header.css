@@ -1,0 +1,108 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 86px;
+    width: 100%;
+    background-color: rgba(162, 88, 5, 0.2);
+    padding: 12px 20px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.header-left .logo-img {
+    width:27.04px;
+    height:27.04px;
+}
+
+.header-left .logo-text {
+    font-family: 'Yatra One';
+    color: var(--blue1);
+    font-size: 37.55px;
+}
+
+.header-mid {
+    display: flex;
+}
+
+.header-mid a {
+    padding: 13px 22px;
+    color: var(--blue1);
+    border-radius: 0 23px;
+    font-size: 24px;
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+
+.header-mid a:hover {
+    background-color: var(--blue2);
+}
+
+.header-right-button {
+    font-size: 24px;
+    padding: 13px 18px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    background-color: rgba(209, 178, 0, 1);
+    border: none;
+    border-radius: 23px;
+    color: var(--blue1);
+}
+
+.header-right-button:hover {
+    background-color: var(--blue3);
+}
+
+.hamburger-icon {
+    display: none;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 1440px) {
+    .header {
+        padding: clamp(8.43px, 4.35px + 0.5313vw, 12px)
+            clamp(16px, 11.4286px + 0.5952vw, 20px);
+    }
+
+    .header-left .logo-img {
+        width: clamp(19px, 9.8114px + 1.1964vw, 27.04px);
+        height: clamp(19px, 9.8114px + 1.1964vw, 27.04px);
+    }
+
+    .header-left .logo-text {
+        font-size: clamp(26.39px, 13.6357px + 1.6607vw, 37.55px);
+    }
+
+    .header-mid a {
+        padding: clamp(9.14px, 4.7286px + 0.5744vw, 13px)
+            clamp(15.32px, 7.9143px + 0.9643vw, 21.8px);
+
+        font-size: clamp(16.87px, 8.7214px + 1.061vw, 24px);
+        border-radius: 0 clamp(16.16px, 8.3429px + 1.0179vw, 23px)
+            0 clamp(16.16px, 8.3429px + 1.0179vw, 23px);
+    }
+
+    .header-right-button {
+        padding: clamp(9.14px, 4.7286px + 0.5744vw, 13px)
+            clamp(12.65px, 6.5357px + 0.7961vw, 18px);
+
+        font-size: clamp(16.87px, 8.7214px + 1.061vw, 24px);
+        border-radius: clamp(16.16px, 8.3429px + 1.0179vw, 23px);
+    }
+}
+
+
+@media (max-width: 730px) {
+    .header-mid,
+    .header-right-button {
+        display: none;
+    }
+
+    .hamburger-icon {
+        display: block;
+    }
+}

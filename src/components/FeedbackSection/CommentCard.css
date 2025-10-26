@@ -1,0 +1,25 @@
+.comment-card {
+    max-height: 530px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 0 0 210px;
+    background-color: rgba(2, 48, 71, 0.3);
+    backface-visibility: hidden; 
+}
+
+.selected {
+    background-color: rgba(162, 89, 5, 0.6);
+}
+
+.comment-card-title {
+    color: var(--blue1);
+}
+
+.comment-card-info {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--blue1);
+}

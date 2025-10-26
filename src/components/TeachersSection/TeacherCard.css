@@ -1,0 +1,49 @@
+.teacher-card {
+    max-width: 330px;
+    max-height: 435px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    backface-visibility: hidden;        /* It makes our scrolling smoother and not cause any glitch issues */
+}
+
+.teacher-img {
+    width: 330px;
+    height: 357px;
+    object-fit: cover;
+    transform: scaleX(-1);
+    border-radius: 30% 0;
+}
+
+.teacher-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.teacher-name {
+    color: var(--blue1);
+}
+
+.teacher-job {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--blue1);
+}
+
+
+@media (max-width: 768px) {
+    .teacher-img {
+        width: clamp(270px, 195.656px + 17.4927vw, 330px);
+        height: clamp(300px, 229.3732px + 16.6181vw, 357px);
+    }
+
+    .teacher-name {
+        font-size: clamp(20px, 15.0437px + 1.1662vw, 24px);
+        font-weight: 400;
+    }
+}

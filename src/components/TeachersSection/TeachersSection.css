@@ -1,0 +1,54 @@
+.teachers-section {
+    width: 100%;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.teachers-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.teachers-title {
+    color: var(--blue1);
+}
+
+.teachers-list {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    gap: 60px;
+    overflow-x: auto;               /* Allows horizantal scrolling */
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.teachers-list::-webkit-scrollbar {
+  display: none;                    /* Removes scrollbar from the screen */
+}
+
+
+@media (max-width: 1440px) {
+    .teachers-section {
+        padding: 0 clamp(60px, 37.1429px + 2.9762vw, 80px);
+    }
+}
+
+@media (max-width: 767px) {
+    .teachers-section {
+        padding: 0 clamp(30px, -7.2807px + 8.7719vw, 60px);
+    }
+
+    .teachers-title {
+        font-size: clamp(24px, 9.0877px + 3.5088vw, 36px);
+    }
+}
+
+@media (max-width: 425px) {
+    .teachers-section {
+        align-items: center;
+    }
+}

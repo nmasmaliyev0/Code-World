@@ -1,0 +1,103 @@
+.feedback-section {
+    width: 100%;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.feedback-header {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.feedback-header-title {
+    color: var(--blue1);
+}
+
+.feedback-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 67px;
+}
+
+.feedback-img {
+    width: 290px;
+    height: 351px;
+    object-fit: cover;
+    object-position: top;
+    transform: scaleX(-1);
+    border-radius: 100px 0;
+    box-shadow: -8px 8px 10px 0 rgba(0, 0, 0, 0.67);
+}
+
+.comments-list {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.18),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.18)
+    );
+    overflow-x: auto;                   /* Allows horizantal scrolling */
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.comments-list::-webkit-scrollbar {
+  display: none;                    /* Removes scrollbar from the screen */
+}
+
+
+@media (max-width: 1440px) {
+    .feedback-section {
+        padding: 0 clamp(60px, 37.079px + 2.9806vw, 80px);
+    }
+
+    .feedback-content {
+        gap: clamp(36px, 0.4724px + 4.62vw, 67px);
+    }
+
+    .feedback-img {
+        width: clamp(235px, 171.9672px + 8.1967vw, 290px);
+        height: clamp(310px, 263.0119px + 6.1103vw, 351px);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .feedback-section {
+        padding: 0 clamp(30px, -7.172px + 8.7464vw, 60px);
+    }
+
+    .feedback-content {
+        gap: clamp(16px, -8.7813px + 5.8309vw, 36px);
+    }
+
+    .feedback-header-title {
+        font-size: clamp(24px, 9.1312px + 3.4985vw, 36px);
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 550px) {
+    .feedback-section {
+        align-items: center;
+    }
+
+    .feedback-content {
+        flex-direction: column;
+    }
+
+    .comments-list {
+        flex-direction: column;
+        height: 600px;
+    }
+}

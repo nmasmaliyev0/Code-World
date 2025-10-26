@@ -1,0 +1,70 @@
+.scholarship-card {
+    width: 303px;
+    height: 456px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 56px 20px 50px 20px;
+    background: 
+        linear-gradient(
+            rgba(255, 255, 255, 1),
+            rgba(255, 255, 255, 0.05),
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 0.05),
+            rgba(255, 255, 255, 1)
+        ),
+        rgba(142, 202, 230, 1);
+}
+
+.scholarship-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 27px;
+}
+
+.scholarship-card-content {
+    width: 100%;
+    height: 179px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.scholarship-card-title {
+    color: var(--blue1);
+    padding-left: 3px;
+}
+
+.scholarship-card-description {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--black);
+}
+
+@media (max-width: 1440px) {
+    .scholarship-card {
+        width: clamp(281px, 255.7869px + 3.2787vw, 303px);
+        height: clamp(423px, 385.1803px + 4.918vw, 456px);
+    }
+
+    .scholarship-card-description {
+        font-size: clamp(16px, 11.4158px + 0.5961vw, 20px);
+    }
+
+    .ux-logo {
+        width: clamp(90px, 78.5395px + 1.4903vw, 100px);
+        height: clamp(90px, 78.5395px + 1.4903vw, 100px);
+    }
+}
+
+@media (max-width: 768px) {
+    .scholarship-card-description {
+        font-size: clamp(14px, 11.5219px + 0.5831vw, 16px);
+    }
+
+    .ux-logo {
+        width: clamp(80px, 67.6093px + 2.9155vw, 90px);
+        height: clamp(80px, 67.6093px + 2.9155vw, 90px);
+    }
+}
